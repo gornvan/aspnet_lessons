@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace WebAPI.Controllers
 {
@@ -28,6 +29,12 @@ namespace WebAPI.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("WeatherForYear", Name = "GetWeatherForecastForYear")]
+        public IActionResult GetYearForecast()
+        {
+            return StatusCode((int)HttpStatusCode.NotImplemented);
         }
     }
 }
