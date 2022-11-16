@@ -1,0 +1,44 @@
+﻿@using MVC_html_helpers.Helpers;
+@model CatViewModel
+
+@{
+    ViewData["Title"] = "CatDetails";
+}
+
+<h1>Cat details</h1>
+
+<div>
+    <h4>CatViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthYear)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthYear)
+            @Html.RenderAgeSpecificallyForCats()
+        </dd>
+    </dl>
+</div>
+
+
+@if(Model.ParentsNames != null){
+    Html.Partial("CatParents.cshtml");
+}
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
