@@ -1,24 +1,26 @@
-﻿using DAL.Entities;
+﻿using DAL;
+using DAL.Entities;
 using lesson6.Business.Contract.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace lesson6.Business.Services
 {
     public class CarService : ICarService
     {
-        // public for demonstration
-        public readonly IRequestAccontingService _requestAccontingService;
+        private readonly TireServiceDBContext _dbContext;
 
-        public static int serviceCounter = 0;
-        public int thisInstanceNumber;
-
-        public CarService(IRequestAccontingService requestAccontingService) {
-            thisInstanceNumber = serviceCounter++;
-            _requestAccontingService = requestAccontingService;
+        public CarService(
+            TireServiceDBContext dbContext
+        ) {
+            _dbContext = dbContext;
         }
 
-        public List<Car> getAllCars()
+        public async Task<List<Car>> getAllCars()
         {
-            throw new NotImplementedException();
+            return await _dbContext.Cars
+                .Include(c => c.Tires) // to fetch all in just one request - include Tires
+                .AsNoTracking() // a read-only request - asnotracking
+                .ToListAsync();
         }
     }
 }
