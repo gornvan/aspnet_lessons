@@ -1,0 +1,8 @@
+﻿@using webServer.Areas.Cars.ViewModels;
+
+@model CarListViewModel
+
+@foreach (CarViewModel car in Model.Cars)
+{
+    <p>A @car.Make with @(car.TireIds?.Count ?? 0) tires </p>
+}
