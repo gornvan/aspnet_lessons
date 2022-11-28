@@ -21,7 +21,8 @@ namespace lesson6.Controllers
             _actionService = actionService;
         }
 
-        
+
+        [HttpGet]
         public ActionResult Index()
         {
             return Content("hello");

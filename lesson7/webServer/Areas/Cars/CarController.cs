@@ -16,7 +16,7 @@ namespace webServer.Areas.Cars
             _carService = carService;
         }
 
-
+        [HttpGet]
         public ActionResult Index()
         {
             var carsList = _carService.getAllCars().Select(
