@@ -2,6 +2,6 @@
 {
     public class CarListViewModel
     {
-        public List<CarViewModel> Cars { get; set; }
+        public List<CarViewModel> Cars { get; set; } = new List<CarViewModel>();
     }
 }
