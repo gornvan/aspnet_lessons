@@ -17,15 +17,16 @@ namespace webServer.Areas.Cars
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            var carsList = _carService.getAllCars().Select(
-                cm => new CarViewModel {
-                    Make = cm.Make,
-                    MakeYear = cm.MakeYear,
-                    TireIds = cm.Tires.Select(t => t.Id).ToList()
-                }
-            ).ToList();
+            var carsList = (await _carService.getAllCars())
+                .Select(
+                    cm => new CarViewModel {
+                        Make = cm.Make,
+                        MakeYear = cm.MakeYear,
+                        TireIds = cm.Tires.Select(t => t.Id).ToList()
+                        }
+                ).ToList();
 
             var carListViewModel = new CarListViewModel
             {
