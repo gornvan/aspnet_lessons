@@ -5,7 +5,7 @@ using webServer.Areas.Cars.ViewModels;
 namespace webServer.Areas.Cars
 {
     [Route("[controller]")]
-    public class CarController : ControllerBase
+    public class CarController : Controller
     {
         private readonly ICarService _carService;
 
