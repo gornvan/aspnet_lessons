@@ -7,19 +7,20 @@ namespace lesson6
 {
     internal static class Startup
     {
-        public static void GatherServices( IServiceCollection services)
+        public static void GatherServices(IServiceCollection services, IConfiguration config)
         {
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
+            var dbcontext = ConfigureDBContext(config);
 
             services.AddTransient<ICarService, CarService>();
         }
 
-        public static TireServiceDBContext ConfigureDBContext()
+        private static TireServiceDBContext ConfigureDBContext(IConfiguration config)
         {
-            // todo take connectionString
+            config.GetConnectionString("ConnectionString_TireService");
 
             var context = new TireServiceDBContext("(carsDB).");
             return context;
