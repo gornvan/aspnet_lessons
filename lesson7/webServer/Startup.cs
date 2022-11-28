@@ -13,12 +13,8 @@ namespace lesson6
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
-            services.AddSingleton<IForeverService, ForeverService>();
 
             services.AddTransient<ICarService, CarService>();
-            services.AddTransient<ITireService, OneShotService>();
-
-            services.AddScoped<IRequestAccontingService, RequestAccontingService>();
         }
 
         public static TireServiceDBContext ConfigureDBContext()
