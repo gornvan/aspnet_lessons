@@ -7,7 +7,7 @@ namespace DAL
     {
         public TireServiceDBContext(DbContextOptions<TireServiceDBContext> options) : base(options)
         {
-            this.Database.EnsureCreated();
+            this.Database.Migrate();
         }
 
         public DbSet<Car> Cars { get; set; }
