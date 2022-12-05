@@ -7,6 +7,7 @@ Startup.GatherServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -18,6 +19,11 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseRouting();
+
+app.MapControllerRoute(
+    name: "Common",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();
