@@ -10,6 +10,7 @@ namespace lesson6
         public static void GatherServices(IServiceCollection services, IConfiguration config)
         {
             services.AddControllers();
+            services.AddMvcCore().AddRazorViewEngine();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
@@ -26,5 +27,6 @@ namespace lesson6
                 options.UseSqlServer(connectionString);
             });
         }
+
     }       
 }           
