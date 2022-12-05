@@ -2,6 +2,8 @@
 
 @model CarListViewModel
 
+<h3>Cars</h3>
+
 @foreach (CarViewModel car in Model.Cars)
 {
     <p>A @car.Make with @(car.TireIds?.Count ?? 0) tires </p>
