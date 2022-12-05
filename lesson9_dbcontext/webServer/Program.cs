@@ -7,6 +7,7 @@ Startup.GatherServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
+Startup.MigrateDB(app.Services);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -24,6 +25,5 @@ app.UseRouting();
 app.MapControllerRoute(
     name: "Common",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-
 
 app.Run();
