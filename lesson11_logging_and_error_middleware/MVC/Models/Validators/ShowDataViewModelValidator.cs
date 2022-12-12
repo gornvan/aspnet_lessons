@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace lesson10_validation.Models.Validators
+namespace lesson11_serilog.Models.Validators
 {
     public class ShowDataViewModelValidator : AbstractValidator<ShowDataViewModel>
     {

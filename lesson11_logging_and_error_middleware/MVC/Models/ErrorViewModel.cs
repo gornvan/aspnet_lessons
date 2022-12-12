@@ -1,4 +1,4 @@
-namespace lesson10_validation.Models;
+namespace lesson11_serilog.Models;
 
 public class ErrorViewModel
 {

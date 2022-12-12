@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson10_validation", "lesson10_validation.csproj", "{18DC5010-CB1B-40AB-BBD8-17745CF4B183}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson11_serilog", "lesson11_serilog.csproj", "{18DC5010-CB1B-40AB-BBD8-17745CF4B183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

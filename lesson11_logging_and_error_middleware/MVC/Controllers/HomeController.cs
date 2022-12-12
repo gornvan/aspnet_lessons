@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using lesson10_validation.Models;
+using lesson11_serilog.Models;
 
-namespace lesson10_validation.Controllers;
+namespace lesson11_serilog.Controllers;
 
 public class HomeController : Controller
 {

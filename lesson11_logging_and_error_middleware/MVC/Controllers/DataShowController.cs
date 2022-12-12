@@ -1,13 +1,11 @@
 ﻿using FluentValidation;
-using lesson10_validation.Models;
-using lesson10_validation.Models.Validators;
+using lesson11_serilog.Models;
+using lesson11_serilog.Models.Validators;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.ComponentModel.DataAnnotations;
-using System.Reflection;
 
-namespace lesson10_validation.Controllers
+namespace lesson11_serilog.Controllers
 {
     public class DataShowController : Controller
     {

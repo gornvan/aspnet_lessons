@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace lesson10_validation.Models
+namespace lesson11_serilog.Models
 {
     public class ShowDataViewModel
     {
