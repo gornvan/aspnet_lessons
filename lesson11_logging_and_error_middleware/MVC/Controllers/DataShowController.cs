@@ -9,6 +9,12 @@ namespace lesson11_serilog.Controllers
 {
     public class DataShowController : Controller
     {
+        private readonly ILogger<DataShowController> _logger;
+        public DataShowController(ILogger<DataShowController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index(ShowDataViewModel model)
         {
             var validity = ModelState.IsValid;
