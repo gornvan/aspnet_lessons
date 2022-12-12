@@ -1,17 +1,27 @@
+using lesson11_serilog.ErrorHandling;
+using lesson11_serilog.Logging;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+SerilogConfigurator.ConfigureSerilog(builder, LogLevel.Warning, "log.txt");
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+var exceptionHandlingMiddleware = new LessonExceptionHandlerMiddleware(Log.Logger);
+
+// FOR DEMONSTRATION, DO IT IN ANY MODE
+app.UseExceptionHandler(options =>
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+    app.UseExceptionHandler(options =>
+    {
+        options.Run(exceptionHandlingMiddleware.HandleException);
+    });
+});
+app.UseHsts();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
