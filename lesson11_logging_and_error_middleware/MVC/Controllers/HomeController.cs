@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using lesson11_serilog.Models;
+using lesson11_serilog.ErrorHandling.HttpExceptions;
 
 namespace lesson11_serilog.Controllers;
 
@@ -18,8 +19,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Privacy(int year)
     {
+        if(year < 1) {
+            throw new BadRequestException("year must be more than 1", nameof(year));
+        }
         return View();
     }
 
