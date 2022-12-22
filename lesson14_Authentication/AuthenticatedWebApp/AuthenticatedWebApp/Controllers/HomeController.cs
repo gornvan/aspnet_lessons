@@ -1,4 +1,5 @@
 ﻿using AuthenticatedWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,9 +16,11 @@ namespace AuthenticatedWebApp.Controllers
 
         public IActionResult Index()
         {
+            var claims = User.Claims;
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Privacy()
         {
             return View();
