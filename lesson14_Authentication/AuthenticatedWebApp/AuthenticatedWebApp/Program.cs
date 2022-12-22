@@ -1,12 +1,15 @@
 using AuthenticatedWebApp.Data;
+using AuthenticatedWebApp.Data.Seed;
+using AuthenticatedWebApp.Services.Sendgrid;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace AuthenticatedWebApp
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +19,23 @@ namespace AuthenticatedWebApp
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => {
+                options.SignIn.RequireConfirmedAccount = true;
+                })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
+
+            builder.Services.AddTransient<CreateDefaultUserService>();
+
+
             var app = builder.Build();
+
+            await Startup.InitializeIdentities(app.Services);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
