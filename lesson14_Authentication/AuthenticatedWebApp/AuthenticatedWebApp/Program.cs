@@ -25,7 +25,13 @@ namespace AuthenticatedWebApp
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.Lockout.AllowedForNewUsers = true;
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+            });
+
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddTransient<IEmailSender, EmailSender>();
