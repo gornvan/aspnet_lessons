@@ -1,0 +1,29 @@
+NORMAL FLOW
+
+Authorization
+Resource Executing
+Action Executing
+
+Action
+
+Action Executed
+Result Executing
+// Result Execution by Framework
+Result Executed
+Resource Executed
+
+
+
+
+EXEPTIONAL FLOW
+
+Authorization
+Resource Executing
+Action Executing
+
+Action
+
+Action Executed
+Exception
+Resource Executed
+
