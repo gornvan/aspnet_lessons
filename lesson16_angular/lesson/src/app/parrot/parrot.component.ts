@@ -11,11 +11,11 @@ export class ParrotComponent {
   constructor(private parrotNamesService: ParrotNamesService) {}
 
   name: string = "";
-  wingSpan: string = "";
+  wingSpan: number = 0;
 
   ngOnInit(): void {
     this.name = this.parrotNamesService.getNames()[0];
-    this.wingSpan = "" + Math.floor(Math.random()*100);
+    this.wingSpan = Math.floor(Math.random()*100);
     
     console.log(this.name);
   }
@@ -23,5 +23,8 @@ export class ParrotComponent {
   onSubmit(): void {
     console.log(this.name);
     console.log(this.wingSpan);
+
+    this.name = this.name + "!"
+    this.wingSpan = this.wingSpan * 2
   }
 }
