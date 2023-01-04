@@ -19,4 +19,9 @@ export class ParrotComponent {
     
     console.log(this.name);
   }
+
+  onSubmit(): void {
+    console.log(this.name);
+    console.log(this.wingSpan);
+  }
 }

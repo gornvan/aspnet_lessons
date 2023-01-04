@@ -1,5 +1,8 @@
-
 <p>parrot works!</p>
 
-<input                  [(ngModel)]="name">
-<input type="number"    [(ngModel)]="wingSpan">
+<form (ngSubmit)="onSubmit()" name="parrot">
+    <input name="name"                      [(ngModel)]="name"      #nameInput="ngModel">
+    <input name="wingSpan" type="number"    [(ngModel)]="wingSpan"  #wingSpanInput="ngModel">
+
+    <button type="submit" class="btn btn-success" >Submit</button>
+</form>
