@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ParrotNamesService } from '../services/parrot/parrot-names.service';
 
 @Component({
@@ -8,13 +9,16 @@ import { ParrotNamesService } from '../services/parrot/parrot-names.service';
   styleUrls: ['./parrot.component.css']
 })
 export class ParrotComponent {
-  constructor(private parrotNamesService: ParrotNamesService) {}
+  nameFromRoute: string = "";
+  constructor(private parrotNamesService: ParrotNamesService, activeRoute: ActivatedRoute) {
+    this.nameFromRoute = activeRoute.snapshot.params['name'];
+  }
 
   name: string = "";
   wingSpan: number = 0;
 
   ngOnInit(): void {
-    this.name = this.parrotNamesService.getNames()[0];
+    this.name = this.nameFromRoute || this.parrotNamesService.getNames()[0];
     this.wingSpan = Math.floor(Math.random()*100);
     
     console.log(this.name);
