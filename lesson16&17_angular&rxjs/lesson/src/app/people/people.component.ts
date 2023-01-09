@@ -16,9 +16,9 @@ export class PeopleComponent {
   }
 
   ngOnInit(){
-    this.peopleService.getPeople()
-      .subscribe((people: Person[]) => {
-        this.ListOfNames = people.map(person => person.Name).join(', ')
-      });;
+    this.peopleService.getPeopleNames()
+      .subscribe((peopleNames: string[]) => {
+        this.ListOfNames = peopleNames.join(', ');
+      });
   }
 }
