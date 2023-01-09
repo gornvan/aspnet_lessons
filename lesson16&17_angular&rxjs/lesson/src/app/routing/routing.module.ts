@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: 'home', component: AppComponent },
   { path: 'parrot', component: ParrotComponent },
+  { path: 'parrot/:name', component: ParrotComponent },
   { path: 'people', component: PeopleComponent },
 ];
 
