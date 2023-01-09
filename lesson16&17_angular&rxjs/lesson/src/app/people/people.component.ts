@@ -12,13 +12,19 @@ import { Person } from '../models/person';
 })
 export class PeopleComponent {
   ListOfNames: String = "";
-  constructor(private peopleService: PeopleService){
-  }
+  ErrorMessage: String = "";
+  constructor(private peopleService: PeopleService){}
 
   ngOnInit(){
     this.peopleService.getPeopleNames()
-      .subscribe((peopleNames: string[]) => {
-        this.ListOfNames = peopleNames.join(', ');
-      });
+      .subscribe(
+        (peopleNames: string[]) => {
+          this.ListOfNames = peopleNames.join(', ');
+        },
+        error => {
+          this.ErrorMessage = error.message;
+          console.log(JSON.stringify(error));
+        }
+      );
   }
 }

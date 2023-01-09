@@ -10,7 +10,7 @@ export class PeopleService {
   constructor(private httpClient: HttpClient) { }
 
   getPeople() : Observable<Person[]> {
-    return this.httpClient.get<Person[]>('assets/people.json');
+    return this.httpClient.get<Person[]>('assets/WRONGpeople.json');
   }
 
   getPeopleNames(): Observable<string[]>
@@ -19,7 +19,8 @@ export class PeopleService {
       people =>{
         return people.map(p => p.Name);
       }
-    ));
+    ))
+    ;
   }
 
 }
