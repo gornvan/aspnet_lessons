@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: 'home', component: AppComponent },
   { path: 'parrot', component: ParrotComponent },
   { path: 'people', component: PeopleComponent },
 ];
