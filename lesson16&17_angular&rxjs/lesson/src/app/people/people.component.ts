@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PeopleService } from '../services/people.service';
+import { PeopleService } from '../services/people/people.service';
 import { Person } from '../models/person';
 
 @Component(

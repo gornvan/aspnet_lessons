@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ParrotNamesService } from '../services/parrot-names.service';
+import { ParrotNamesService } from '../services/parrot/parrot-names.service';
 
 @Component({
   providers: [ParrotNamesService],
