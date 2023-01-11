@@ -1,8 +1,6 @@
-import { CatfoodService } from "src/app/services/catfood.service";
 
-
-export class StubCatfoodService extends CatfoodService {
-    constructor() { super(); }
+export class StubCatfoodService {
+    constructor() {}
   
     food = '';
     requestFoodCalled :number = 0;
@@ -11,7 +9,7 @@ export class StubCatfoodService extends CatfoodService {
       this.food = food;
     }
 
-    override requestFood() : string {
+    requestFood() : string {
       this.requestFoodCalled += 1;
       return this.food;
     }
