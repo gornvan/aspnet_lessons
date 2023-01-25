@@ -1,0 +1,30 @@
+# image for RUNNING
+FROM microsoft/aspnetcore:2.0 AS runner
+# dir inside the Container for working
+WORKDIR /app
+# port
+EXPOSE 80
+
+# Image for BUILDING
+FROM microsoft/aspnetcore-build:2.0 AS build
+WORKDIR /src
+# copy the csproject into the container LAYER 1
+COPY BE_dotnet.csproj BE_dotnet.csproj
+# pull the nuget packages
+RUN dotnet restore DockerServiceDemo.csproj
+# copy the rest of the application sources
+COPY . .
+WORKDIR /src
+# build the application
+RUN dotnet build DockerServiceDemo.csproj -c Release -o /app
+
+
+#IMAGE for PUBLISHING
+FROM build AS publish
+RUN dotnet publish DockerServiceDemo.csproj -c Release -o /app
+
+# IMAGE - FINAL
+FROM runner AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "DockerServiceDemo.dll"]

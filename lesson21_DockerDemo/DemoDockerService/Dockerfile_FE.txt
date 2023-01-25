@@ -1,0 +1,21 @@
+# base image
+FROM node:alpine
+
+# dir inside the Container for working
+WORKDIR /usr/app/front
+
+# copy dependencies configuration
+COPY ./package.json ./package.json
+
+# run within the container - install dependencies
+RUN npm install
+
+# copy everything from the current dir to Working dir
+COPY ./ ./
+
+# pass through port #3000
+EXPOSE 3000
+
+# on Container start - run the command:
+CMD ["npm", "start"]
+
