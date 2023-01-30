@@ -7,7 +7,10 @@ namespace TeaBusiness_BLL.Services
     {
         private ITeaService _teaService;
 
-        public TeaStorageService(ITeaService teaService) { 
+        private ITeaBusinessUnitOfWork _unitOfWork;
+
+        public TeaStorageService(ITeaBusinessUnitOfWork unitOfWork, ITeaService teaService) { 
+            _unitOfWork = unitOfWork;
             _teaService = teaService;
         }
 

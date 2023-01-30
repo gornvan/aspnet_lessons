@@ -1,5 +1,4 @@
-﻿
-using TeaBusiness_BLL.Contracts;
+﻿using TeaBusiness_DAL.UoW;
 
 namespace WebApiApp
 {
@@ -7,12 +6,18 @@ namespace WebApiApp
     {
         public static void RegisterServices(IServiceCollection services, IConfiguration configuration)
         {
-            TeaBusiness_BLL.Module.RegisterServices(services, configuration);
-
-            var transientServicet = services.Where(s => s.Lifetime == ServiceLifetime.Transient).ToList();
-
-            var teaStorageServies = services.BuildServiceProvider().GetService<ITeaStorageService>();
+            services.AddDbContext<TeaBusinessDbContext>();
             
+            services.AddScoped<ITeaBusinessUnitOfWork, TeaBusinessUnitOfWork>();
+
+
+
+            TeaBusiness_BLL.Module.RegisterServices(services, configuration);
+            // debug-time checks:
+            //var transientServicet = services.Where(s => s.Lifetime == ServiceLifetime.Transient).ToList();
+            //var teaStorageServies = services.BuildServiceProvider().GetService<ITeaStorageService>();
+            
+
         }
     }
 }

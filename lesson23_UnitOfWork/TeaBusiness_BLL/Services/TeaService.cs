@@ -5,6 +5,12 @@ namespace TeaBusiness_BLL.Services
 {
     public class TeaService : TransientServiceBase, ITeaService
     {
+        private ITeaBusinessUnitOfWork _unitOfWork;
+
+        public TeaService(ITeaBusinessUnitOfWork unitOfWork) {
+            _unitOfWork = unitOfWork;
+        }
+
         public Task<TeaModel> AddTea()
         {
             throw new NotImplementedException();

@@ -1,6 +1,6 @@
 ﻿namespace TeaBusiness_BLL.Contracts.Models
 {
-    public class StorageModel
+    public class StorageModel : EntityBase<long>
     {
     }
 }

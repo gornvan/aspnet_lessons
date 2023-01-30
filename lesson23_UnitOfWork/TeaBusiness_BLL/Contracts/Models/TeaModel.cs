@@ -1,6 +1,6 @@
 ﻿namespace TeaBusiness_BLL.Contracts.Models
 {
-    public class TeaModel
+    public class TeaModel : EntityBase<long>
     {
     }
 }
