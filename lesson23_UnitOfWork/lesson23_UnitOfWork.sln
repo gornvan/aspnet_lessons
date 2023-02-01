@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson23_UnitOfWork", "WebApiApp\lesson23_UnitOfWork.csproj", "{BCCC08EE-15E8-4F42-BF8A-A235ABCC180A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiApp", "WebApiApp\WebApiApp.csproj", "{BCCC08EE-15E8-4F42-BF8A-A235ABCC180A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaBusiness_BLL", "TeaBusiness_BLL\TeaBusiness_BLL.csproj", "{2A4A259A-33F4-430F-B36E-C2A27D1A355F}"
 EndProject
