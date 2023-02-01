@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TeaBusiness_DAL\TeaBusiness_DAL.csproj" />
     <ProjectReference Include="..\TeaBusiness_BLL\TeaBusiness_BLL.csproj" />
     <ProjectReference Include="..\TeaBusiness_DAL\TeaBusiness_DAL.csproj" />
   </ItemGroup>
