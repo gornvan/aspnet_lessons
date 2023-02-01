@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesson23_UnitOfWork", "WebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaBusiness_BLL", "TeaBusiness_BLL\TeaBusiness_BLL.csproj", "{2A4A259A-33F4-430F-B36E-C2A27D1A355F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeaBusiness_DAL", "..\TeaBusiness_DAL\TeaBusiness_DAL.csproj", "{E07C20AD-DB9B-45D7-8472-58FE8D80D5D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaBusiness_DAL", "..\TeaBusiness_DAL\TeaBusiness_DAL.csproj", "{E07C20AD-DB9B-45D7-8472-58FE8D80D5D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

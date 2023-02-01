@@ -8,7 +8,9 @@ namespace TeaBusiness_DAL.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<StorageModel> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Storage");
+            builder.HasMany<TeaModel>(storage => storage.TeasStored)
+                .WithMany(tea => tea.StoragesStoring);
         }
     }
 }

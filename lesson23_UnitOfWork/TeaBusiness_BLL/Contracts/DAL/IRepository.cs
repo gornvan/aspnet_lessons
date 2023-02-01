@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TeaBusiness_BLL.Contracts.Models;
 
-namespace TeaBusiness_DAL.Repository
+namespace TeaBusiness_BLL.Contracts.DAL
 {
     public interface IRepository<TModel, Tid> where TModel : EntityBase<Tid>
     {

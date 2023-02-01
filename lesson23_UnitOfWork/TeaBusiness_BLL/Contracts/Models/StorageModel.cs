@@ -2,5 +2,8 @@
 {
     public class StorageModel : EntityBase<long>
     {
+        public string Name { get; set; }
+
+        public virtual IEnumerable<TeaModel> TeasStored { get; set; }
     }
 }

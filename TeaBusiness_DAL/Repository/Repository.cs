@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using TeaBusiness_BLL.Contracts.DAL;
 using TeaBusiness_BLL.Contracts.Models;
 
 namespace TeaBusiness_DAL.Repository

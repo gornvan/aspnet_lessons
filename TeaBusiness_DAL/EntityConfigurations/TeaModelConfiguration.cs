@@ -8,7 +8,9 @@ namespace TeaBusiness_DAL.EntityConfigurations
     {
         public void Configure(EntityTypeBuilder<TeaModel> builder)
         {
-            
+            builder.ToTable("Tea");
+            builder.HasMany<StorageModel>(tea => tea.StoragesStoring)
+                .WithMany(storage => storage.TeasStored);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using TeaBusiness_BLL.Contracts.Models;
-using TeaBusiness_DAL.Repository;
 
-namespace TeaBusiness_DAL.UoW
+namespace TeaBusiness_BLL.Contracts.DAL
 {
     /// <summary>
     /// On exiting out of Procedure (Scope) - IDisposable must call Dispose on DataContext
