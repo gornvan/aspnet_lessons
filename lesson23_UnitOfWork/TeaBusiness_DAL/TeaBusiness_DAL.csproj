@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lesson23_UnitOfWork\TeaBusiness_BLL\TeaBusiness_BLL.csproj" />
+    <ProjectReference Include="..\TeaBusiness_BLL\TeaBusiness_BLL.csproj" />
   </ItemGroup>
 
 </Project>
