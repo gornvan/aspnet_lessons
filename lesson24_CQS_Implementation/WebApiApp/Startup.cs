@@ -1,7 +1,9 @@
 ﻿
+using CQSMediator;
+using CQSMediator.CQS;
 using TeaBusiness_BLL.Contracts;
 using TeaBusiness_BLL.Contracts.DAL;
-using TeaBusiness_DAL;
+using TeaBusiness_BLL.CQS.Tea.Commands;
 using TeaBusiness_DAL.UoW;
 
 namespace WebApiApp
@@ -16,9 +18,23 @@ namespace WebApiApp
 
             TeaBusiness_BLL.Module.RegisterServices(services, configuration);
 
-# if DEBUG
+            RegisterMediator(services);
+
+#if DEBUG
             DebugChecks(services);
 #endif
+        }
+
+        private static void RegisterMediator(IServiceCollection services)
+        {
+            services.AddScoped<IMediator>((IServiceProvider provider) =>
+            {
+                return CQSMediatorBuilder.BuildMediatorWithExecutablesFromAssembly(
+                    typeof(TeaBusiness_BLL.Module).Assembly,
+                    provider,
+                    typeof(ITeaBusinessUnitOfWork)
+                );
+            });
         }
 
 
@@ -29,7 +45,11 @@ namespace WebApiApp
             var provider = services.BuildServiceProvider();
             var teaStorageServies = provider.GetService<ITeaStorageService>();
 
-            var dbContext = provider.GetService<TeaBusinessDbContext>();
+            var dbContext = provider.GetService<TeaBusiness_DAL.TeaBusinessDbContext>();
+
+            var mediator = provider.GetService<IMediator>();
+
+            var newTea = mediator.Process(new CreateTeaCommand { Name = "Pu Erh" });
         }
     }
 }

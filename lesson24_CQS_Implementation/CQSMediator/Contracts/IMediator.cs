@@ -7,14 +7,11 @@ namespace CQSMediator.CQS
         /// <summary>
         /// Execute Command or Query.
         /// </summary>
-        Task<Tout> Process<TExecutable, Tout>(TExecutable executable) where TExecutable : IExecutable<Tout>;
+        Task<object> Process(IQuery queryDto);
 
         /// <summary>
         /// Just a more common name for "Process"
         /// </summary>
-        Task<Tout> Send<TExecutable, Tout>(TExecutable executable) where TExecutable : IExecutable<Tout>
-        {
-            return Process<TExecutable, Tout>(executable);
-        }
+        Task<object> Process(ICommand commandDto);
     }
 }

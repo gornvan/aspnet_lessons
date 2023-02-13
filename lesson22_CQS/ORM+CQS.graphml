@@ -1155,7 +1155,7 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GenericGroupNode configuration="DemoGroup">
-              <y:Geometry height="560.1661060572637" width="1410.713095092572" x="2464.853136430229" y="1782.0540594407198"/>
+              <y:Geometry height="560.1661060572633" width="1410.713095092573" x="2898.9952117643716" y="1663.8154204099728"/>
               <y:Fill color="#68B0E3" color2="#3C679B" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="0.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="42.689453125" x="0.0" y="0.0">Startup</y:NodeLabel>
@@ -1179,10 +1179,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n0">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="2607.2596491884296" y="1984.87032345667"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3041.4017245225723" y="1866.6316844259231"/>
               <y:Fill color="#FF9900" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="248.107421875" x="35.851756863229184" y="26.938842981090374">Find all Commands and Queries on Assembly<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="248.107421875" x="35.85175686322873" y="26.938842981090602">Find all Commands and Queries on Assembly<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1195,10 +1195,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n1">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="2607.2596491884296" y="2087.449181293851"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3041.4017245225723" y="1969.210542263104"/>
               <y:Fill color="#FF9900" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.73046875" x="81.54023342572918" y="26.938842981090602">Register them all in Mediator<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.73046875" x="81.54023342572873" y="26.938842981090602">Register them all in Mediator<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1211,10 +1211,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n2">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3094.511654883524" y="1984.8703234566701"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3528.6537302176666" y="1866.6316844259231"/>
               <y:Fill color="#C0C0C0" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="184.744140625" x="67.53339748822918" y="26.938842981090602">Find all Repositories on Assembly<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="184.744140625" x="67.53339748822873" y="26.938842981090602">Find all Repositories on Assembly<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1227,10 +1227,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n3">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3094.511654883524" y="2087.4491812938513"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3528.6537302176666" y="1969.2105422631043"/>
               <y:Fill color="#C0C0C0" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="181.416015625" x="69.19745998822918" y="26.938842981090602">Register them all in IoC container<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="181.416015625" x="69.19745998822873" y="26.938842981090602">Register them all in IoC container<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1243,7 +1243,7 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n4">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.bpmn.Event.withShadow">
-              <y:Geometry height="30.0" width="30.0" x="3239.417122684253" y="1815.7552313157198"/>
+              <y:Geometry height="30.0" width="30.0" x="3673.5591980183963" y="1697.5165922849728"/>
               <y:Fill color="#FFFFFFE6" color2="#D4D4D4CC" transparent="false"/>
               <y:BorderStyle color="#27AE27" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="29.341796875" x="0.3291015625" y="34.0">Start<y:LabelModel>
@@ -1266,10 +1266,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n5">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="2607.2596491884296" y="2190.0280391310316"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3041.4017245225723" y="2071.7894001002846"/>
               <y:Fill color="#FF9900" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="206.1015625" x="56.854686550729184" y="26.938842981090602">Register Mediator in the IoC container<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="206.1015625" x="56.85468655072873" y="26.938842981090602">Register Mediator in the IoC container<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1282,10 +1282,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n6">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3540.7552959213426" y="1984.8703234566701"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3974.897371255486" y="1866.6316844259231"/>
               <y:Fill color="#FF9900" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="164.060546875" x="77.87519436322918" y="26.938842981090602">Find all Services on Assembly<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="164.060546875" x="77.87519436322873" y="26.938842981090602">Find all Services on Assembly<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1298,10 +1298,10 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         <node id="n23::n7">
           <data key="d6">
             <y:GenericNode configuration="BevelNode">
-              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3540.7552959213426" y="2087.4491812938513"/>
+              <y:Geometry height="72.57885783718098" width="319.81093560145837" x="3974.897371255486" y="1969.2105422631043"/>
               <y:Fill color="#FF9900" transparent="false"/>
               <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="181.416015625" x="69.19745998822918" y="26.938842981090602">Register them all in IoC container<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="181.416015625" x="69.19745998822873" y="26.938842981090602">Register them all in IoC container<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1313,10 +1313,9 @@ Task&lt;Tout&gt; Execute()<y:LabelModel>
         </node>
         <node id="n23::n8">
           <data key="d4"/>
-          <data key="d5"/>
           <data key="d6">
             <y:UMLNoteNode>
-              <y:Geometry height="28.0" width="223.52658470571077" x="3262.6787358328097" y="1956.8703234566701"/>
+              <y:Geometry height="28.0" width="223.52658470571077" x="3696.820811166953" y="1838.6316844259231"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="188.08984375" x="17.718370477855387" y="4.6494140625">No need to do with APS.NET Core<y:LabelModel>

@@ -4,12 +4,13 @@ using TeaBusiness_BLL.Contracts.Models;
 
 namespace TeaBusiness_BLL.CQS.Tea.Commands
 {
-    public class CreateTeaCommandHandler : CreateTeaCommand, IExecutable<TeaModel>
+    public class CreateTeaCommandHandler : CreateTeaCommand, IHandler<TeaModel>
     {
         private ITeaBusinessUnitOfWork _unitOfWork;
 
-        public CreateTeaCommandHandler(ITeaBusinessUnitOfWork unitOfWork)
+        public CreateTeaCommandHandler(CreateTeaCommand command, ITeaBusinessUnitOfWork unitOfWork)
         {
+            this.Name = command.Name;
             _unitOfWork = unitOfWork;
         }
 

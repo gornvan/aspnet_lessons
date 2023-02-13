@@ -5,7 +5,7 @@ using TeaBusiness_BLL.Contracts.Models;
 
 namespace TeaBusiness_BLL.CQS.Tea.Queries
 {
-    internal class TeasQeuryHandler : TeasQuery, IExecutable<List<TeaModel>>
+    internal class TeasQeuryHandler : TeasQuery, IHandler<List<TeaModel>>
     {
 
         private readonly ITeaBusinessUnitOfWork _unitOfWork;
