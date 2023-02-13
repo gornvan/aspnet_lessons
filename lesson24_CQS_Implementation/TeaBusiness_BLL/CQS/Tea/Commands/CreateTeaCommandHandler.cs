@@ -1,4 +1,4 @@
-﻿using TeaBusiness_BLL.Contracts.CQS;
+﻿using CQSMediator.Contracts.CQS;
 using TeaBusiness_BLL.Contracts.DAL;
 using TeaBusiness_BLL.Contracts.Models;
 

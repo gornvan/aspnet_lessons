@@ -1,4 +1,4 @@
-﻿using TeaBusiness_BLL.Contracts.CQS.Validation;
+﻿using CQSMediator.Contracts.CQS.Validation;
 using TeaBusiness_BLL.CQS.Tea.Queries;
 
 namespace TeaBusiness_BLL.CQS.Tea.Commands

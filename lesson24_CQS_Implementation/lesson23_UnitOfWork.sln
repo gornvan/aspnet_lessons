@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaBusiness_BLL", "TeaBusin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeaBusiness_DAL", "TeaBusiness_DAL\TeaBusiness_DAL.csproj", "{F62E2746-5B2D-45C6-9E60-DADDF6C95480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQSMediator", "CQSMediator\CQSMediator.csproj", "{91C4B6BB-AF2D-438B-A6C3-604702D46A12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F62E2746-5B2D-45C6-9E60-DADDF6C95480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F62E2746-5B2D-45C6-9E60-DADDF6C95480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F62E2746-5B2D-45C6-9E60-DADDF6C95480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C4B6BB-AF2D-438B-A6C3-604702D46A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C4B6BB-AF2D-438B-A6C3-604702D46A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C4B6BB-AF2D-438B-A6C3-604702D46A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C4B6BB-AF2D-438B-A6C3-604702D46A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

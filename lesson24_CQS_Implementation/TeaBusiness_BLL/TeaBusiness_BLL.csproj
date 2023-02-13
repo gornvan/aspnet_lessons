@@ -17,4 +17,8 @@
     <Folder Include="CQS\TeaStorage\Queries\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CQSMediator\CQSMediator.csproj" />
+  </ItemGroup>
+
 </Project>

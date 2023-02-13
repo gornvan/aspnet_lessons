@@ -1,4 +1,4 @@
-﻿using TeaBusiness_BLL.Contracts.CQS;
+﻿using CQSMediator.Contracts.CQS;
 
 namespace TeaBusiness_BLL.CQS.Tea.Queries
 {
