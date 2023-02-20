@@ -1,18 +1,15 @@
 ﻿using lessson26_LocalizatoinInMVC.Localization;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
-using System.Text.RegularExpressions;
 
 namespace lessson26_LocalizatoinInMVC
 {
     public static class Startup
     {
-
         public static void RegisterLocaleProvider(IServiceCollection services, IConfiguration config)
         {
 
             services.AddLocalization(options => options.ResourcesPath = "Localization/Translations");
-
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
