@@ -1,3 +1,4 @@
+using lessson26_LocalizatoinInMVC;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+Startup.RegisterLocaleProvider(builder.Services, builder.Configuration);
 
 builder.Services.AddMvc()
     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
@@ -13,6 +14,8 @@ builder.Services.AddMvc()
 
 
 var app = builder.Build();
+
+app.UseRequestLocalization();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
