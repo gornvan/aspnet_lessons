@@ -1,8 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model string
+@{
+    ViewData["Title"] = Model;
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">@Model</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

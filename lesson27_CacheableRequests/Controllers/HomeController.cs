@@ -1,31 +1,50 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using lesson27_CacheableRequests.Models;
+using Microsoft.Extensions.Caching.Memory;
 
-namespace lesson27_CacheableRequests.Controllers;
+namespace lessson26_LocalizatoinInMVC.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IMemoryCache _memoryCache;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IMemoryCache memcache)
     {
         _logger = logger;
+        _memoryCache = memcache;
     }
 
-    public IActionResult Index()
+    private string FetchData()
     {
-        return View();
+        var rand = new Random();
+        var randChars = Enumerable.Range(0, 100).Select(
+            i => (char)rand.Next(127)).ToArray();
+        var randString = new string(randChars);
+        return randString;
+    }
+
+    public IActionResult Index(string? id = null)
+    {
+        if(id == null)
+        {
+            return View("Index", "");
+        }
+
+
+        if (_memoryCache.TryGetValue(id, out var valueFromCache))
+        {
+            return View("Index", valueFromCache);
+        }
+
+        var value = FetchData();
+        _memoryCache.Set(id, value);
+
+        return View("Index", value);
     }
 
     public IActionResult Privacy()
     {
         return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
