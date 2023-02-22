@@ -35,14 +35,14 @@ public class ConfigController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("/Encription")]
-    public EncryptionConfig Encription()
+    [HttpGet("Encryption")]
+    public EncryptionConfig Encryption()
     {
         _encryptionConfig.EncryptionKey += "!";
         return _encryptionConfig ?? new EncryptionConfig { };
     }
 
-    [HttpGet("/PayPal")]
+    [HttpGet("PayPal")]
     public List<PaypalAccountConfig> PayPal()
     {
         return _paypalAccounts ?? new List<PaypalAccountConfig>();
