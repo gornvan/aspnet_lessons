@@ -1,4 +1,5 @@
 *.Production.json
+*.csproj.user
 
 **/bin/
 **/obj/
