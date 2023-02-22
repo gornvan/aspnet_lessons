@@ -1,3 +1,5 @@
+*.Production.json
+
 **/bin/
 **/obj/
 **/.vs/
