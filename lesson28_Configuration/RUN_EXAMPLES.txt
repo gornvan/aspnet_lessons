@@ -1,0 +1,9 @@
+
+# set config values via env variables, then run
+export EncryptionConfig__EncryptionKey="CustomKey"
+export PayPalAccounts__0__ApiKey="KEY FROM ENV"
+./lesson28_Configuration.exe
+
+
+# set config values via command-line argument:
+./lesson28_Configuration.exe --EncryptionConfig:EncryptionKey="test" --PayPalAccounts:0:ApiKey="KEY FROM CLI"
