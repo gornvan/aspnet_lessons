@@ -11,23 +11,34 @@ public class ConfigController : ControllerBase
     private readonly EncryptionConfig? _encryptionConfig;
     private readonly List<PaypalAccountConfig>? _paypalAccounts;
 
-    public ConfigController(ILogger<ConfigController> logger, IConfiguration configuration)
+    public ConfigController(
+        ILogger<ConfigController> logger,
+        EncryptionConfig encConfig,
+        List<PaypalAccountConfig> paypalAccounts
+        //, IConfiguration configuration
+        )
     {
         // bad way:
         //var key = configuration.GetChildren().First(cs => cs.Key == "EncryptionKey");
-        
-        // good way, with container classes:
-        var appConfig = configuration.Get<ApplicationConfig>();
+
+        // better way, with container classes:
+        // var appConfig = configuration.Get<ApplicationConfig>();
 
         // ignore nulls - just for demonstration
-        _encryptionConfig = appConfig?.EncryptionConfig;
-        _paypalAccounts = appConfig?.PayPalAccounts;
+        //_encryptionConfig = appConfig?.EncryptionConfig;
+        //_paypalAccounts = appConfig?.PayPalAccounts;
+
+        // best way - depend and use exactly the classes that configure the service:
+        _encryptionConfig = encConfig;
+        _paypalAccounts = paypalAccounts;
+
         _logger = logger;
     }
 
     [HttpGet("/Encription")]
     public EncryptionConfig Encription()
     {
+        _encryptionConfig.EncryptionKey += "!";
         return _encryptionConfig ?? new EncryptionConfig { };
     }
 
