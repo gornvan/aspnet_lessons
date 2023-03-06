@@ -1,9 +1,15 @@
 using lesson31_webSockets;
+using lesson31_webSockets.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// SIGNALR
+// ####
+builder.Services.AddSignalR();
+// ####
 
 var app = builder.Build();
 
@@ -15,13 +21,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// RAW SOCKETS
+// ####
 var webSocketOptions = new WebSocketOptions
 {
     KeepAliveInterval = TimeSpan.FromMinutes(2)
 };
-
 app.UseWebSockets(webSocketOptions);
 WebSocketPathBinder.BindWebSocketPath(app, "/ws");
+// ####
+
+
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -33,5 +44,13 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+// SIGNALR 
+// ####
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<NotificationHub>("/notification");
+});
+// ####
 
 app.Run();
