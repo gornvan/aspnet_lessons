@@ -1,0 +1,46 @@
+card card
+cloud cloud
+component component
+database database
+node node
+
+@startuml
+!theme mars
+
+skinparam nodesep 100
+skinparam ranksep 100
+skinparam linetype polyline
+skinparam padding 1
+
+cloud internet as Internet
+
+
+node "Server Lesson30" {
+    component WebApp as "webappp"
+}
+
+node HFWC as "Hangfire Worker Cluster" {
+    
+    node a {
+    collections hfws as "HangFire Workers"
+    }
+    
+    port SQLport_HWC as "SQL"
+    hfws <-l-> SQLport_HWC
+    
+}
+
+database wadb as "WebApp DB"
+database hfdb as "HangFire DB"
+
+WebApp <-> wadb : "business data"
+WebApp -> hfdb #text:blue : "create jobs"
+
+
+SQLport_HWC <-> hfdb : "get jobs and store results"
+
+WebApp <-l-> Internet : "HTTP"
+
+Internet -[hidden]- hfdb
+
+@enduml

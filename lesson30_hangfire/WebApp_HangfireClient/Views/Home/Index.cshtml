@@ -1,0 +1,12 @@
+﻿@using lesson30_hangfire.Controllers;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action=@nameof(HomeController.CreateJob)>
+    <input type="submit" value="Create one time job"/>
+</form>
+
+<form asp-action=@nameof(HomeController.CreateRecurringJob)>
+    <input type="submit" value="Create recurring job" />
+</form>

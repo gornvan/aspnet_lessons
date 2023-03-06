@@ -1,0 +1,32 @@
+card card
+cloud cloud
+component component
+database database
+node node
+
+@startuml
+!theme mars
+
+skinparam nodesep 100
+skinparam ranksep 100
+
+cloud internet as Internet
+
+
+node "Server Lesson30" {
+component WebApp as "webappp"
+component hfw as "HangFire Worker"
+}
+
+database wadb as "WebApp DB"
+database hfdb as "HangFire DB"
+
+WebApp <-> wadb : "business data"
+WebApp -> hfdb #text:blue : "create jobs"
+hfw <-> hfdb : "get jobs and store results"
+
+WebApp <-l-> Internet : "HTTP"
+
+WebApp -[hidden]- hfw
+
+@enduml

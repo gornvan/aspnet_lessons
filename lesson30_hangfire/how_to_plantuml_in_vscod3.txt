@@ -1,0 +1,7 @@
+graphvis: https://www.graphviz.org/download/
+ ! add to PATH
+
+extention: "plantuml"
+
+Alt+D to open preview
+ ! must have diagram data in the file to open preview
