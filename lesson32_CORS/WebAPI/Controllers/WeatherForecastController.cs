@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -19,6 +20,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
+    [EnableCors("Public")]
     public IEnumerable<WeatherForecast> Get()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -31,6 +33,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpPost(Name = "GetWeatherForecast")]
+    [EnableCors("Private")]
     public IEnumerable<WeatherForecast> Post()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
