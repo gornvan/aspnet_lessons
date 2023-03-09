@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<img src="http://localhost:5103/WeatherForecast"/>
+
+<script>
+    const sendRequests = async () => {
+        const port = 5103;
+        const getresult = await fetch(`http://localhost:${port}/WeatherForecast`, { method: 'GET' });
+        console.log(getresult);
+
+        // must break with no cors configured
+        const postresult = await fetch(`http://localhost:${port}/WeatherForecast`, { method: 'POST' });
+        console.log(postresult);
+    }
+
+    sendRequests();
+</script>
